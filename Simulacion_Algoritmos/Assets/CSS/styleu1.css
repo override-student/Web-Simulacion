@@ -1,0 +1,245 @@
+.container {
+  color: white;
+  width: 100%;
+  background-color: #000;
+  padding: 30px 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.container nav {
+  position: relative;
+  height: 50px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container nav::after {
+  content: "";
+  background: black;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 47px;
+  filter: blur(0.5px);
+}
+
+.container nav label {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+#Cuadrados:checked ~ nav label .Productos,
+#Cuadrados:checked ~ nav label .Cuadrados,
+#Cuadrados:checked ~ nav label .Multiplicador,
+#Cuadrados:checked ~ nav label .Congruencial,
+#Cuadrados:checked ~ nav label .Blum,
+#Cuadrados:checked ~ nav label .lineal,
+#Cuadrados:checked ~ nav label .Cuadratico {
+  color: #dcbadb;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.container nav .slider {
+  position: absolute;
+  height: 4.5px;
+  background-color: gold;
+  border-radius: 20px;
+  width: 10%;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+  filter: blur(0.4px);
+}
+
+#Cuadrados:checked ~ nav .slider {
+  left: 15%;
+}
+
+#Multiplicador:checked ~ nav .slider {
+  left: 30%;
+}
+
+#Congruencial:checked ~ nav .slider {
+  left: 45%;
+}
+
+#Blum:checked ~ nav .slider {
+  left: 60%;
+}
+
+#lineal:checked ~ nav .slider {
+  left: 75%;
+}
+
+#Cuadratico:checked ~ nav .slider {
+  left: 90%;
+}
+
+#Productos:checked ~ nav .Productos {
+  color: silver;
+}
+
+#Cuadrados:checked ~ nav .Cuadrados {
+  color: silver;
+}
+
+#Multiplicador:checked ~ nav .Multiplicador {
+  color: silver;
+}
+
+#Congruencial:checked ~ nav .Congruencial {
+  color: silver;
+}
+
+#Blum:checked ~ nav .Blum {
+  color: silver;
+}
+
+#lineal:checked ~ nav .lineal {
+  color: silver;
+}
+
+#Cuadratico:checked ~ nav .Cuadratico {
+  color: silver;
+}
+
+.toggle-element-u1 section {
+  filter: blur(0.3px);
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-element-u1 section .content {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.toggle-element-u1 section .content .title {
+  font-size: 21px;
+  font-weight: 600;
+  margin: 30px 0 10px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#Productos:checked ~ section .content-1 {
+  display: block;
+}
+
+#Cuadrados:checked ~ section .content-2 {
+  display: block;
+}
+
+#Multiplicador:checked ~ section .content-3 {
+  display: block;
+}
+
+#Congruencial:checked ~ section .content-4 {
+  display: block;
+}
+
+#Blum:checked ~ section .content-5 {
+  display: block;
+}
+
+#lineal:checked ~ section .content-6 {
+  display: block;
+}
+
+#Cuadratico:checked ~ section .content-7 {
+  display: block;
+}
+
+.input-group,
+.output-group {
+  margin-bottom: 15px;
+}
+
+.toggle-element-u1 button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.toggle-element-u1 button:hover {
+  background-color: gray;
+}
+
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.89);
+}
+
+th,
+td {
+  border: 1px solid white;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #000;
+}
+
+.content {
+  text-align: center;
+}
+
+input {
+  border: none;
+  border-radius: 3px;
+  background: #000;
+  color: white;
+  border: 1px solid white;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background-color: #000;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}

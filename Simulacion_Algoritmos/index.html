@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Assets/CSS/styleu1.css" />
+    <link rel="stylesheet" href="Assets/CSS/styleu2.css" />
+    <link rel="stylesheet" href="Assets/CSS/styleuF.css">
+    <link rel="stylesheet" href="Assets/CSS/Style.css">
+    <link rel="icon" type="icon" href="Assets/IMG/robot_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">
+    <link rel="stylesheet" href="./SRC/component/Pageu1/style.css">
+    <link rel="stylesheet" href="./SRC/component/Pageu2/style.css">
+    <link rel="stylesheet" href="./SRC/component/PageuF/style.css">
+    <link rel="stylesheet" href="./SRC/component/Header/style.css">
+    <link rel="stylesheet" href="./SRC/component/Header/TogleStyle.css">
+    <link rel="stylesheet" href="./SRC/component/Slash/BarraLateral.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Simulación</title>
+  </head>
+  <body>
+
+  <button id="toggleButton">
+      <svg id="hamburger" class="Header__toggle-svg" viewbox="0 0 60 40">
+        <g
+          stroke="#fff"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path id="top-line" d="M10,10 L50,10 Z"></path>
+          <path id="middle-line" d="M10,20 L50,20 Z"></path>
+          <path id="bottom-line" d="M10,30 L50,30 Z"></path>
+        </g>
+      </svg>
+  </button>
+
+  <div id="sidebar" class="sidebar">
+    <div class="content">
+      <br />
+      <br />
+      <h2>Simulación temas</h2>
+      <div class="toggle-element-aboutUs">
+
+        <div class="toggle-tool-group-aboutUs">
+            <header class="header-form-aboutUs">
+                <span>Acerca de</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="toggle-icon">
+                    <path fill="currentColor" d="M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z"></path>
+                </svg>
+            </header>
+            <div class="toggle-content-aboutUs">
+              <div class="button-list">
+                    <form>
+                    <p>Desarrollo web por:</p>
+                    <h4>Juan Manuel Moreno Garcia</h4>
+                    <p>Colaboradores:</p>
+                    <h4>Jesús Omar Raya Morales</h4>
+                    <h4>Christopher Alejandro Maldonado Chavez</h4>
+                    <p>Información:</p>
+                    <h4>Carrera</h4>
+                    <h5>Ingenieria en sistemas</h5>
+                    <h4>Semestre/grupo</h4>
+                    <h5>5 B</h5>
+                    <h4>Materia</h4>
+                    <h5>Simulación</h5>
+                    <h4>Maestro</h4>
+                    <h5>David Guillermo Pacheco Contreras</h5>
+                    <h4>Fecha de creación</h4>
+                    <h5>17 de Marzo del 2024</h5>
+                  </form>
+                </div> 
+              </div>
+        </div>
+      </div>
+      <div class="traslate-order">
+        <button id="NA-btn">Números aleatorios</button>
+      <button  id="Val-btn">Validaciones</button>
+      <button  id="Monte-btn">Montecarlo</button>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="menu container">  
+      <nav class="navbar">
+        <img
+          id="logosize2"
+          class="logo-2"
+          src="/Assets/IMG/robot_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+          alt=""
+        />
+
+          <div class="socials">
+            
+            <a href="https://x.com/override_inc">
+              <div class="social">
+                <img src="/Assets/IMG/ICON/s2.svg" alt="" />
+              </div>
+            </a>
+            <a href="https://www.instagram.com/jmmzz18">
+              <div class="social">
+                <img src="/Assets/IMG/ICON/s3.svg" alt="" />
+              </div>
+            </a>
+          </div>
+
+          <p>Simulación</p>
+
+          
+      </nav>
+      
+      
+
+    </div>
+    
+  </header> 
+
+  <div class="toggle-element-u1" id="toggle-element-u1">
+      <div class="toggle-tool-group">
+          <header class="header-form">
+              <span>Algoritmos de numeros aleatorios Unidad 1</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="toggle-icon">
+                  <path fill="currentColor" d="M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z"></path>
+              </svg>
+          </header>
+          <div class="toggle-content">
+            <div class="button-list">
+              <div class="container">
+                <input type="radio" name="slider" id="Productos" checked />
+                <input type="radio" name="slider" id="Cuadrados" />
+                <input type="radio" name="slider" id="Multiplicador" />
+                <input type="radio" name="slider" id="Congruencial" />
+                <input type="radio" name="slider" id="Blum" />
+                <input type="radio" name="slider" id="lineal" />
+                <input type="radio" name="slider" id="Cuadratico" />
+                <nav>
+                  <label for="Productos" class="Productos">P</label>
+                  <label for="Cuadrados" class="Cuadrados">C</label>
+                  <label for="Multiplicador" class="Multiplicador">M</label>
+                  <label for="Congruencial" class="Congruencial">C</label>
+                  <label for="Blum" class="Blum">B</label>
+                  <label for="lineal" class="lineal">L</label>
+                  <label for="Cuadratico" class="Cuadratico">Cuadratico</label>
+                  <div class="slider"></div>
+                </nav>
+
+                <!-- Modal de confirmación -->
+                <div id="successModal" class="modal" style="display: none;">
+                  <div class="modal-content">
+                    <p id="modalMessage">¡Los datos se guardaron con éxito!</p>
+                  </div>
+                </div>
+          
+                <section>
+                  <div class="content content-1">
+                    <form id="inputForm">
+                    <h1>Algoritmo de productos medios</h1>
+                    <label for="x0">X0 (semilla):</label><br />
+                    <input type="text" id="x0P" placeholder="" required/>
+                    <br/><br/>
+                    <label for="x1">X1 (semilla):</label><br />
+                    <input type="text" id="x1P" placeholder="" required/>
+                    <br/><br/>
+                    <label for="rep">Rep:</label><br />
+                    <input type="text" id="repP" placeholder="" required/>
+                    <br/><br/>
+                      <button type="submit">Calcular</button>
+                      <button type="button" id="clearButton">Limpiar campos</button>
+                      <button type="button" id="dowloadP">Guardar</button>
+                    </form>
+                    <br>
+                    <div class="table-container1">
+                      <table id="iterationsTable1">
+                        <thead>
+                          <tr>
+                            <th>Iteración</th>
+                            <th>x</th>
+                            <th>y (x)</th>
+                            <th>r (x)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Iteraciones se mostrarán aquí -->
+                        </tbody>
+                      </table>
+                    </div>
+                    </button>
+                  </div>
+                  
+                  <script src="/SRC/component/Algoritmos/AProductos/Productos.js"></script>
+          
+                  <div class="content content-2">
+                    <h1>Algoritmo de Cuadrados medios</h1>
+                    <form id="inputForm2">
+                        <label for="x0CU">X0 (semilla):</label><br/>
+                        <input type="text" id="x0CU" placeholder="" required />
+                        <br/><br/>
+                        <label for="repCU">Rep:</label><br/>
+                        <input type="text" id="repCU" placeholder="" required />
+                        <br/><br/>
+                        <button type="button" id="calcularButtonCU">Calcular</button>
+                        <button type="button" id="clearButtonCU">Limpiar campos</button>
+                        <button type="button" id="dowloadCU">Guardar</button>
+                      </form>
+                    <br/>
+                    <div class="table-container2">
+                        <table id="iterationsTable2">
+                            <thead>
+                                <tr>
+                                    <th>Iteración</th>
+                                    <th>x</th>
+                                    <th>y (x)</th>
+                                    <th>r (x)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Iteraciones se mostrarán aquí -->
+                            </tbody>
+                        </table>
+                    </div>
+                  </div>
+                
+                  <script src="/SRC/component/Algoritmos/ACuadrado/Cuadrados.js"></script>
+          
+                  <div class="content content-3">
+                    <h1>Algoritmo de Multiplicador constante</h1>
+                    <form id="inputForm3">
+                    <label for="x0M">X0 (semilla):</label>
+                    <br/>
+                    <input type="text" id="x0M" placeholder="" required />
+                    <br/><br/>
+                    <label for="aM">a (constante):</label>
+                    <br/>
+                    <input type="text" id="aM" placeholder="" required />
+                    <br/><br/>
+                    <label for="rep">Rep:</label>
+                    <br/>
+                    <input type="text" id="repM" placeholder="" required />
+                    <br/><br/>
+                    <div class="button-container">
+                      <button type="submit">Calcular</button>
+                      <button type="button" id="clearButtonM">Limpiar campos</button>
+                      <button type="button" id="dowloadM">Guardar</button>
+                    </div>
+                    </form>
+                    <br />
+                    <div class="table-container3">
+                      <table id="iterationsTable3">
+                        <thead>
+                          <tr>
+                            <th>Iteración</th>
+                            <th>x</th>
+                            <th>y (x)</th>
+                            <th>r (x)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Iteraciones se mostrarán aquí -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+          
+                  <script src="/SRC/component/Algoritmos/AMultiplicador/Multiplicador.js"></script>
+          
+                  <div class="content content-4">
+                    <h1>Algoritmo congruencial aditivo</h1>
+                    <form id="inputForm4">
+                    <label for="x0C">X0 (semillas debe ingresar cada una con un espacio):</label>
+                    <br/>
+                    <input type="text" id="x0C" placeholder="" required />
+                    <br/><br/>
+                    <label for="mC">m (mod):</label>
+                    <br/>
+                    <input type="text" id="mC" placeholder="" required />
+                    <br/><br/>
+                    <label for="repC">Rep:</label>
+                    <br/>
+                    <input type="text" id="repC" placeholder="" required />
+                    <br/><br/>
+                    <div class="button-container">
+                      <button type="submit">Calcular</button>
+                      <button type="button" id="clearButtonC">Limpiar campos</button>
+                      <button type="button" id="dowloadC">Guardar</button>
+                    </div>
+                    </form>
+                    <br />
+                    <div class="table-container4">
+                      <table id="iterationsTable4">
+                        <thead>
+                          <tr>
+                            <th>Iteración</th>
+                            <th>x</th>
+                            <th>r (x)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Iteraciones se mostrarán aquí -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <script src="./SRC/component/Algoritmos/ACongruencial/ACongruencial.js"></script>
+          
+                  <div class="content content-5">
+                    <h1>Algoritmo Blum Blum y shulo</h1>
+                    <form id="inputForm5">
+                    <label for="x0Blum">X0 (Semilla):</label>
+                    <br/>
+                    <input type="text" id="x0Blum" placeholder="" required />
+                    <br/><br/>
+                    <label for="aB">m (mod):</label>
+                    <br/>
+                    <input type="text" id="aBlum" placeholder="" required />
+                    <br/><br/>
+                    <label for="rep">Rep:</label>
+                    <br/>
+                    <input type="text" id="repBlum" placeholder="" required />
+                    <br/><br/>
+                    <div class="button-container">
+                      <button type="submit" id="calcularButtonB">Calcular</button>
+                      <button type="button" id="clearButtonB">Limpiar campos</button>
+                      <button type="button" id="dowloadB">Guardar</button>
+                    </div>
+                    </form>
+                    <br />
+                    <div class="table-container5">
+                      <table id="iterationsTable5">
+                        <thead>
+                          <tr>
+                            <th>Iteración</th>
+                            <th>x</th>
+                            <th>r (x)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Iteraciones se mostrarán aquí -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <script src="./SRC/component/Algoritmos/ABlum/ABlum.js"></script>
+          
+                  <div class="content content-6">
+                    <h1>Algoritmo Lineal Congruencial</h1>
+                    <form id="inputForm6">
+                    <label for="x0L">X0 (semilla):</label>
+                    <br/>
+                    <input type="text" id="x0L" placeholder="" required />
+                    <br/><br/>
+                    <label for="aL">a:</label><br />
+                    <input type="text" id="aL" placeholder="" required />
+                    <br /><br />
+                    <label for="cL">c (constante aditiva):</label><br />
+                    <input type="text" id="cL" placeholder="" required />
+                    <br /><br />
+                    <label for="mL">m (modulo):</label><br />
+                    <input type="text" id="mL" placeholder="" required />
+                    <br /><br />
+                    <label for="repL">Rep:</label>
+                    <br/>
+                    <input type="text" id="repL" placeholder="" required />
+                    <br/><br/>
+                    <div class="button-container">
+                      <button type="submit" id="calcularButtonL">Calcular</button>
+                      <button type="button" id="clearButtonL">Limpiar campos</button>
+                      <button type="button" id="dowloadL">Guardar</button>
+                    </div>
+                    </form>
+                    <br />
+                    <div class="table-container6">
+                      <table id="iterationsTable6">
+                        <thead>
+                          <tr>
+                            <th>Iteración</th>
+                            <th>x</th>
+                            <th>y (x)</th>
+                            <th>r (x)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Iteraciones se mostrarán aquí -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <script src="/SRC/component/Algoritmos/ALineal/Lineal.js"></script>
+          
+                  <div class="content content-7">
+                    <h1>Algoritmo congruencial cuadratico</h1>
+                    <form id="inputForm4">
+                    <label for="x0CC">X0 (semilla):</label>
+                    <br/>
+                    <input type="text" id="x0CC" placeholder="" required />
+                    <br/><br/>
+                    <label for="aCC">a:</label><br />
+                    <input type="text" id="aCC" placeholder="" required />
+                    <br /><br />
+                    <label for="c">c (constante aditiva):</label><br />
+                    <input type="text" id="cCC" placeholder="" required />
+                    <br /><br />
+                    <label for="b">b:</label><br />
+                    <input type="text" id="bCC" placeholder="" required />
+                    <br /><br />
+                    <label for="MCC">m (mod):</label><br/>
+                    <input type="text" id="MCC" placeholder="" required />
+                    <br/><br/>
+                    <label for="repC">Rep:</label>
+                    <br/>
+                    <input type="text" id="repCC" placeholder="" required />
+                    <br/><br/>
+                    <div class="button-container">
+                      <button type="button" id="calcularButtonC">Calcular</button>
+                      <button type="button" id="clearButtonCC">Limpiar campos</button>
+                      <button type="button" id="dowloadCC">Guardar</button>
+                    </div>
+                    </form>
+                    <br />
+                    <div class="table-container8">
+                      <table id="iterationsTable8">
+                        <thead>
+                          <tr>
+                            <th>Iteración</th>
+                            <th>x</th>
+                            <th>r (x)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Iteraciones se mostrarán aquí -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <script src="/SRC/component/Algoritmos/ACuadratico/Cuadratico.js"></script>
+
+                </section>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+
+  <div style="display: none;" class="toggle-element-u2" id="toggle-element-u2">
+    <div class="toggle-tool-group-u2">
+        <header class="header-form-u2">
+            <span>Validación de numeros aleatorios Unidad 2</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="toggle-icon">
+                <path fill="currentColor" d="M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z"></path>
+            </svg>
+        </header>
+        <div class="toggle-content-u2">
+          <div class="button-list">
+            <div class="container2">
+              <input type="radio" name="slider" id="Media" checked />
+              <input type="radio" name="slider" id="Varianza" />
+              <input type="radio" name="slider" id="ChiCuadrada" />
+              <input type="radio" name="slider" id="Kalmo" />
+              <input type="radio" name="slider" id="AyB" />
+              <input type="radio" name="slider" id="AyBM" />
+              <input type="radio" name="slider" id="Poker" />
+              <input type="radio" name="slider" id="Hueco" />
+              <nav>
+                <label for="Media" class="Media">M</label>
+                <label for="Varianza" class="Varianza">V</label>
+                <label for="ChiCuadrada" class="ChiCuadrada">X</label>
+                <label for="Kalmo" class="Kalmo">K</label>
+                <label for="AyB" class="AyB">Ayb</label>
+                <label for="AyBM" class="AyBM">AyBM</label>
+                <label for="Poker" class="Poker">P</label>
+                <label for="Hueco" class="Hueco">H</label>
+                <div class="slider"></div>
+              </nav>
+        
+              <section>
+                <div class="content2 content-1">
+                  <form id="inputFormU2">
+                  <h1>Media</h1>
+                  <br>
+                  <label for="numerosAleatorios">X0 (Numeros Aletorios(introduce cada uno con un espacio)):</label><br />
+                  <input type="text" id="numerosAleatorios" placeholder="" required/>
+                  <br/><br/>
+                  <label for="nivelConfianza">Z: (nivel de confianza)</label><br />
+                  <input type="text" id="nivelConfianza" placeholder="" required/>
+                  <br/><br/>
+                    <button type="submit">Calcular</button>
+                    <button type="button" id="clearButton1">Limpiar campos</button>
+                    <button type="button" id="NA">Numeros aleatorios</button>
+                    <button type="button" id="ia" class="ialogosize"><img src="/Assets/IMG/ICON/vecteezy_artificial-intelligence-ai-processor-chip-vector-icon-symbol_6662139-removebg-preview.svg" alt="" srcset=""></button>
+                  </form>
+                  <br>
+                  <div class="table-containerU2">
+                    <table id="iterationsTableU2">
+                      <thead>
+                        <tr>
+                          <th>x</th>
+                          <th>Ls (x)</th>
+                          <th>Li (x)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Iteraciones se mostrarán aquí -->
+                      </tbody>
+                    </table>
+                  </div>
+                  </button>
+                </div>
+
+                <script type="module" src="/SRC/component/Validaciones/Media/ia.mjs"></script>
+                <script src="/SRC/component/Validaciones/Media/script.js"></script>
+                <script src="./SRC/component/Validaciones/Media/Media.js"></script>
+        
+                <div class="content2 content-2">
+                  <h1>Varianza</h1>
+                  <br>
+                  <form id="inputForm2U2">
+                    <label for="x">X (Numeros aleatorios(introduce cada uno con un espacio)):</label><br/>
+                    <input type="text" id="x" placeholder="" required />
+                    <br/><br/>
+                    <label for="ZLi">Z (Limite Inferior):</label><br/>
+                    <input type="text" id="ZLi" placeholder="" required />
+                    <br/><br/>
+                    <label for="ZLs">Z (Limite Superior):</label><br/>
+                    <input type="text" id="ZLs" placeholder="" required />
+                    <br/><br/>
+                    <button type="submit">Verificar</button>
+                    <button type="button" id="clearButton2">Limpiar campos</button>
+                    <button type="button" id="NAV">Numeros aleatorios</button>
+                    <button type="button" id="iaV" class="ialogosize"><img src="/Assets/IMG/ICON/vecteezy_artificial-intelligence-ai-processor-chip-vector-icon-symbol_6662139-removebg-preview.svg" alt="" srcset=""></button>
+                  </form>
+                  <br/>
+                  <div class="table-container2U2">
+                    <table id="iterationsTable2U2">
+                      <thead>
+                        <tr>
+                          <th>Li</th>
+                          <th>LS</th>
+                          <th>Varianza</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Iteraciones se mostrarán aquí -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <script type="module" src="/SRC/component/Validaciones/Varianza/ia.mjs"></script>
+                <script src="./SRC/component/Validaciones/Varianza/script.js"></script>
+                <script src="./SRC/component/Validaciones/Varianza/Varianza.js"></script>
+
+                <div class="content2 content-3">
+                  <h1>Pruebas de uniformidad; Chi-cuadrada</h1>
+                  <br>
+                  <form id="inputForm3U2">
+                    <label for="xChi">X (Numeros aleatorios(introduce cada uno con un espacio)):</label><br/>
+                    <input type="text" id="xChi" placeholder="" required />
+                    <br/><br/>
+                    <button type="submit">Verificar</button>
+                    <button type="button" id="clearButton3">Limpiar campos</button>
+                    <button type="button" id="NAChi">Numeros aleatorios</button>
+                    <button type="button" id="iaChi" class="ialogosize"><img src="/Assets/IMG/ICON/vecteezy_artificial-intelligence-ai-processor-chip-vector-icon-symbol_6662139-removebg-preview.svg" alt="" srcset=""></button>
+                  </form>
+                  <br/>
+                  <div class="table-container3U2">
+                    <table id="iterationsTabl3U2">
+                      <thead>
+                        <tr>
+                          <th>X</th>
+                          <th>Rechazo</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Iteraciones se mostrarán aquí -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <script type="module" src="/SRC/component/Validaciones/Chi-cuadrada/ia.mjs"></script>
+                <script src="/SRC/component/Validaciones/Chi-cuadrada/script.js"></script>
+                <script type="module" src="/SRC/component/Validaciones/Chi-cuadrada/Chi-Cuadrada.mjs"></script>
+
+                <div class="content2 content-4">
+                  <h1>Prueba de Kalmogerov-smirrov</h1>
+                  <br>
+                  <form id="inputForm4U2">
+                    <label for="xK">X (Numeros aleatorios(introduce cada uno con un espacio)):</label><br/>
+                    <input type="text" id="xK" placeholder="" required />
+                    <br/><br/>
+                    <button type="submit">Verificar</button>
+                    <button type="button" id="clearButton4">Limpiar campos</button>
+                    <button type="button" id="NAK">Numeros aleatorios</button>
+                    <button type="button" id="iaK" class="ialogosize"><img src="/Assets/IMG/ICON/vecteezy_artificial-intelligence-ai-processor-chip-vector-icon-symbol_6662139-removebg-preview.svg" alt="" srcset=""></button>
+                  </form>
+                  <br/>
+                  <div class="table-container4U2">
+                    <table id="iterationsTabl4U2">
+                      <thead>
+                        <tr>
+                          <th>X</th>
+                          <th>Rechazo</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Iteraciones se mostrarán aquí -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <script type="module" src="/SRC/component/Validaciones/Kalmogerov-smirrov/ia.mjs"></script>
+                <script src="/SRC/component/Validaciones/Kalmogerov-smirrov/script.js"></script>
+                <script type="module" src="/SRC/component/Validaciones/Kalmogerov-smirrov/Kalmogerov-smirov.mjs"></script>
+
+                <div class="content2 content-5">
+                  <h1>Pruebas de independencia; Alg. de corridas arriba y abajo</h1>
+                  <br>
+                  <form id="inputForm5U2">
+                    <label for="xAYB">X (Numeros aleatorios(introduce cada uno con un espacio)):</label><br/>
+                    <input type="text" id="xAYB" placeholder="" required />
+                    <br/><br/>
+                    <button type="submit">Verificar</button>
+                    <button type="button" id="clearButton5">Limpiar campos</button>
+                    <button type="button" id="NAAYB">Numeros aleatorios</button>
+                    <button type="button" id="iaAYB" class="ialogosize"><img src="/Assets/IMG/ICON/vecteezy_artificial-intelligence-ai-processor-chip-vector-icon-symbol_6662139-removebg-preview.svg" alt="" srcset=""></button>
+                  </form>
+                  <br/>
+                  <div class="table-container5U2">
+                    <table id="iterationsTabl5U2">
+                      <thead>
+                        <tr>
+                          <th>X</th>
+                          <th>Rechazo</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Iteraciones se mostrarán aquí -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <script type="module" src="/SRC/component/Validaciones/ArribayAbajo/ia.mjs"></script>
+                <script src="SRC/component/Validaciones/ArribayAbajo/script.js"></script>
+                <script type="module" src="SRC/component/Validaciones/ArribayAbajo/ArribayAbajo.mjs"></script>
+
+                <div class="content2 content-6">
+                  <h1>Pruebas de independencia; Alg. de corridas arriba y abajo de la media</h1>
+                  <br>
+                  <form id="inputForm6U2">
+                    <label for="xAYBM">X (Numeros aleatorios(introduce cada uno con un espacio)):</label><br/>
+                    <input type="text" id="xAYBM" placeholder="" required />
+                    <br/><br/>
+                    <button type="submit">Verificar</button>
+                    <button type="button" id="clearButton6">Limpiar campos</button>
+                    <button type="button" id="NAAYBM">Numeros aleatorios</button>
+                    <button type="button" id="iaAYBM" class="ialogosize"><img src="/Assets/IMG/ICON/vecteezy_artificial-intelligence-ai-processor-chip-vector-icon-symbol_6662139-removebg-preview.svg" alt="" srcset=""></button>
+                  </form>
+                  <br/>
+                  <div class="table-container6U2">
+                    <table id="iterationsTabl6U2">
+                      <thead>
+                        <tr>
+                          <th>X</th>
+                          <th>Rechazo</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Iteraciones se mostrarán aquí -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <script type="module" src="/SRC/component/Validaciones/ArribayAbajoMedia/ia.mjs"></script>
+                <script src="/SRC/component/Validaciones/ArribayAbajoMedia/script.js"></script>
+                <script type="module" src="/SRC/component/Validaciones/ArribayAbajoMedia/ArribayAbajoMedia.mjs"></script>
+
+                <div class="content2 content-7">
+                  <h1>Pruebas de independencia; Pueba Poker</h1>
+                  <br>
+                  <form id="inputForm7U2">
+                    <label for="xP">X (Numeros aleatorios(introduce cada uno con un espacio)):</label><br/>
+                    <input type="text" id="xP" placeholder="" required />
+                    <br/><br/>
+                    <button type="submit">Verificar</button>
+                    <button type="button" id="clearButton7">Limpiar campos</button>
+                    <button type="button" id="NAP">Numeros aleatorios</button>
+                    <button type="button" id="iaP" class="ialogosize"><img src="/Assets/IMG/ICON/vecteezy_artificial-intelligence-ai-processor-chip-vector-icon-symbol_6662139-removebg-preview.svg" alt="" srcset=""></button>
+                  </form>
+                  <br/>
+                  <div class="table-container7U2">
+                    <table id="iterationsTabl7U2">
+                      <thead>
+                        <tr>
+                          <th>X</th>
+                          <th>conjunto</th>
+                          <th>Rechazo</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Iteraciones se mostrarán aquí -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <script type="module" src="/SRC/component/Validaciones/Poker/ia.mjs"></script>
+                <script src="/SRC/component/Validaciones/Poker/script.js"></script>
+                <script type="module" src="/SRC/component/Validaciones/Poker/PruebaPoker.mjs"></script>
+
+                <div class="content2 content-8">
+                  <h1>Pruebas de independencia; Pueba de Huecos</h1>
+                  <br>
+                  <form id="inputForm8U2">
+                    <label for="xH">X (Numeros aleatorios(introduce cada uno con un espacio)):</label><br/>
+                    <input type="text" id="xH" placeholder="" required />
+                    <br/><br/>
+                    <label for="Ralto">Rango Superior:</label><br/>
+                    <input type="text" id="Ralto" placeholder="" required />
+                    <br/><br/>
+                    <label for="RBajo">Rango Inferior:</label><br/>
+                    <input type="text" id="RBajo" placeholder="" required />
+                    <br/><br/>
+                    <button type="submit">Verificar</button>
+                    <button type="button" id="clearButton8">Limpiar campos</button>
+                    <button type="button" id="NAH">Numeros aleatorios</button>
+                    <button type="button" id="iaH" class="ialogosize"><img src="/Assets/IMG/ICON/vecteezy_artificial-intelligence-ai-processor-chip-vector-icon-symbol_6662139-removebg-preview.svg" alt="" srcset=""></button>
+                  </form>
+                  <br/>
+                  <div class="table-container8U2">
+                    <table id="iterationsTabl8U2">
+                      <thead>
+                        <tr>
+                          <th>Hueco</th>
+                          <th>Huecos</th>
+                          <th>Rechazo</th>
+                        </tr>
+                      </thead>
+       
+                      <tbody>
+                        <!-- Iteraciones se mostrarán aquí -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <script type="module" src="/SRC/component/Validaciones/Huecos/ia.mjs"></script>
+                <script type="module" src="/SRC/component/Validaciones/Huecos/PruebadeHuecos.mjs"></script>
+                <script src="/SRC/component/Validaciones/Huecos/script.js"></script>
+
+              </section>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </div>
+  
+  <div style="display: none;" class="toggle-element-uF" id="toggle-element-uF">
+    <div class="toggle-tool-group-uF">
+        <header class="header-form-uF">
+            <span>Montecarlo unidad final</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="toggle-icon">
+                <path fill="currentColor" d="M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z"></path>
+            </svg>
+        </header>
+        <div class="toggle-content-uF">
+          <div class="button-list">
+            <div class="container3">
+              <input type="radio" name="slider" id="Montecarlo" checked />
+              <nav>
+                <label for="Montecarlo" class="Montecarlo">Montecarlo</label>
+                <div class="slider"></div>
+              </nav>
+        
+              <section>
+                <div class="content3 content-1">
+                  <form id="inputFormUF">
+                  <br>
+                  <label for="Nmontecarlo">Cantidades (introduce cada uno con un espacio):</label><br />
+                  <input type="text" id="NMontecarlo" placeholder="" required/>
+                  <br>
+                  <label for="NPmontecarlo">Probabilidades (introduce cada uno con un espacio):</label><br />
+                  <input type="text" id="NPmontecarlo" placeholder="" required/>
+                  <br>
+                  <label for="Yearmontecarlo">Año/s:</label><br />
+                  <input type="text" id="Yearmontecarlo" placeholder="" required/>
+                  <br>
+                  <label for="Qmontecarlo">Q:</label><br />
+                  <input type="text" id="Qmontecarlo" placeholder="" required/>
+                  <br>
+                  <label for="SimulacionesMontecarlo">Simulaciones (Por cada año):</label><br />
+                  <input type="text" id="SimulacionesMontecarlo" placeholder="" required/>
+                  <br>
+                  <label for="SimulacionesMontecarloI">iteraciones de promedio:</label><br />
+                  <input type="text" id="SimulacionesMontecarloI" placeholder="" required/>
+                  <br>
+                  <button type="submit">Calcular</button>
+                    <button id="clearButtonMC">Limpiar campos</button>
+                </form>
+                <br>
+                <canvas id="resultChart" width="1000" height="600"></canvas>
+                </div>
+               
+              </section>
+            </div>
+            <script src="/SRC/component/Montecarlo/Montecarlo.mjs"></script>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="./SRC/component/Header/Togle.js"></script>
+  <script src="./SRC/component/Pageu2/Togle.js"></script>
+  <script src="./SRC/component/Pageu1/Togle.js"></script>
+  <script src="./SRC/component/PageuF/Togle.js"></script>
+  <script type="module" src="/SRC/component/Algoritmos/AProductos/dowloadElement.mjs"></script>
+  <script type="module" src="/SRC/component/Slash/Slash.mjs"></script>
+  </body>
+</html>

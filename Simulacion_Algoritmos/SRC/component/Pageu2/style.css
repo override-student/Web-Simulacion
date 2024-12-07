@@ -1,0 +1,50 @@
+.toggle-element-u2 {
+  width: 100%;
+  color: white;
+  border-radius: 8px;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.toggle-tool-group-u2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+}
+
+.header-form-u2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.header-form-u2 span {
+  flex-grow: 1;
+}
+
+.header-form-u2 svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.65s;
+}
+
+.toggle-content-u2 {
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease-out;
+}
+
+.toggle-element-u2.active .toggle-content-u2 {
+  max-height: 4600px;
+  transition: max-height 0.55s ease-in;
+}
+
+.toggle-element-u2.active header svg {
+  transform: rotate(180deg);
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.774))
+    drop-shadow(0 0 1px rgba(255, 255, 255, 0.774));
+}

@@ -1,0 +1,50 @@
+.toggle-element-uF {
+  width: 100%;
+  color: white;
+  border-radius: 8px;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.toggle-tool-group-uF {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+}
+
+.header-form-uF {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header-form-uF span {
+  flex-grow: 1;
+}
+
+.header-form-uF svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.65s;
+}
+
+.toggle-content-uF {
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease-out;
+}
+
+.toggle-element-uF.active .toggle-content-uF {
+  max-height: 4600px;
+  transition: max-height 0.55s ease-in;
+}
+
+.toggle-element-uF.active header svg {
+  transform: rotate(180deg);
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.774))
+    drop-shadow(0 0 1px rgba(255, 255, 255, 0.774));
+}

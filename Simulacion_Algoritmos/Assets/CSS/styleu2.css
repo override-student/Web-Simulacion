@@ -1,0 +1,248 @@
+.container2 {
+  color: white;
+  width: 100%;
+  background-color: #000;
+  padding: 30px 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container2 nav {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container2 nav::after {
+  content: "";
+  background: black;
+  width: 1010%;
+  height: 1px;
+  position: absolute;
+  top: 47px;
+  filter: blur(0.5px);
+}
+
+.container2 nav label {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+#Varianza:checked ~ nav label .Media,
+#Varianza:checked ~ nav label .Varianza,
+#Varianza:checked ~ nav label .ChiCuadrada,
+#Varianza:checked ~ nav label .Kalmo,
+#Varianza:checked ~ nav label .AyB,
+#Varianza:checked ~ nav label .AyBM,
+#Varianza:checked ~ nav label .Poker,
+#Varianza:checked ~ nav label .Hueco {
+  color: #dcbadb;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.container2 nav .slider {
+  position: absolute;
+  height: 4.5px;
+  background-color: gold;
+  border-radius: 20px;
+  width: 10%;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+  filter: blur(0.4px);
+}
+
+#Varianza:checked ~ nav .slider {
+  left: 15%;
+}
+
+#ChiCuadrada:checked ~ nav .slider {
+  left: 25%;
+}
+
+#Kalmo:checked ~ nav .slider {
+  left: 40%;
+}
+
+#AyB:checked ~ nav .slider {
+  left: 50%;
+}
+
+#AyBM:checked ~ nav .slider {
+  left: 65%;
+}
+
+#Poker:checked ~ nav .slider {
+  left: 75%;
+}
+
+#Hueco:checked ~ nav .slider {
+  left: 85%;
+}
+
+#Media:checked ~ nav .Media {
+  color: silver;
+}
+
+#Varianza:checked ~ nav .Varianza,
+#ChiCuadrada:checked ~ nav .ChiCuadrada,
+#Kalmo:checked ~ nav .Kalmo,
+#AyB:checked ~ nav .AyB,
+#AyBM:checked ~ nav .AyBM,
+#Poker:checked ~ nav .Poker,
+#Hueco:checked ~ nav .Hueco {
+  color: silver;
+}
+
+.container2 section {
+  filter: blur(0.3px);
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section .content2 {
+  display: none;
+  margin-bottom: 20px;
+}
+
+/*section .content2 .title {
+  font-size: 21px;
+  font-weight: 600;
+  margin: 30px 0 10px 0;
+  align-items: center;
+  justify-content: center;
+}*/
+
+#Media:checked ~ section .content-1 {
+  display: block;
+}
+
+#Varianza:checked ~ section .content-2 {
+  display: block;
+}
+
+#ChiCuadrada:checked ~ section .content-3 {
+  display: block;
+}
+
+#Kalmo:checked ~ section .content-4 {
+  display: block;
+}
+
+#AyB:checked ~ section .content-5 {
+  display: block;
+}
+
+#AyBM:checked ~ section .content-6 {
+  display: block;
+}
+
+#Poker:checked ~ section .content-7 {
+  display: block;
+}
+
+#Hueco:checked ~ section .content-8 {
+  display: block;
+}
+
+.input-group,
+.output-group {
+  margin-bottom: 15px;
+}
+
+.toggle-element-u2 button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.toggle-element-u2 button:hover {
+  background-color: gray;
+}
+
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.89);
+}
+
+th,
+td {
+  border: 1px solid white;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #000;
+}
+
+.content2 {
+  text-align: center;
+}
+
+.toggle-element-u2 input {
+  border: none;
+  border-radius: 3px;
+  background: #000;
+  color: white;
+  border: 1px solid white;
+}
+
+/* Estilos para el icono de alerta */
+.tooltip-icon {
+  cursor: pointer;
+  color: white;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.tooltip-icon:hover {
+  color: #333;
+}
+
+/* Estilos para el tooltip personalizado */
+.custom-tooltip {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  display: none; /* Oculto por defecto */
+  z-index: 100;
+}
+
+.ialogosize img {
+  width: 40px;
+  height: 40px;
+}

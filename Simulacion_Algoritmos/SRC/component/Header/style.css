@@ -1,0 +1,92 @@
+.menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+}
+
+.iconX img:hover {
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.774))
+    drop-shadow(0 0 1px rgba(255, 255, 255, 0.774));
+}
+
+.logo-1 {
+  width: 0;
+}
+
+#logosize {
+  width: 60px;
+  height: 60px;
+}
+
+#logosize2,
+#logosize3 {
+  width: 50px;
+  height: 40px;
+}
+
+#logosize2:hover {
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.774))
+    drop-shadow(0 0 1px rgba(255, 255, 255, 0.774));
+}
+
+.iconX img {
+  transform: translateY(5px);
+  width: 30px;
+  height: 30px;
+}
+
+.logo-2 img {
+  width: 70px;
+}
+
+.logo-3 {
+  width: 150px;
+}
+
+.socials {
+  display: flex;
+}
+
+.social {
+  margin: 0 10px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.social:hover {
+  background-color: #ccc;
+}
+
+.social img {
+  margin: 8px 0 0 10px;
+  width: 20px;
+}
+
+.social img #youtubeIconSize {
+  width: 10px;
+  height: 10px;
+}
+
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+.header-content {
+  margin-top: 150px;
+  padding-bottom: 50px;
+}
